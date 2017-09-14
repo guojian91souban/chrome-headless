@@ -17,6 +17,6 @@ RUN mkdir /chrome && cd /chrome && \
     apt-get clean && apt-get autoclean && rm -f *.deb && rm -f *.zip
 
 
-COPY fonts/winFonts/fonts /usr/share/fonts
+COPY fonts/winFonts/fonts/微软雅黑.ttf /usr/share/fonts
 
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
