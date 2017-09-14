@@ -11,8 +11,11 @@ ENV PATH $PATH:/maven/apache-maven-3.3.9/bin/
 RUN mkdir /chrome && cd /chrome && \
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt-get update -y && apt-get install -y gdebi-core && gdebi -n *.deb && \
+    wget https://chromedriver.storage.googleapis.com/2.32/chromedriver_linux64.zip && \
+    unzip *.zip && mv chromedriver /usr/local/bin && \  
     apt-get install -y git && \
     apt-get clean && apt-get autoclean && rm -f *.deb
+
 
 COPY fonts /usr/share/
 
