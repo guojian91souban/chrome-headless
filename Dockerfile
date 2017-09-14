@@ -14,7 +14,7 @@ RUN mkdir /chrome && cd /chrome && \
     wget https://chromedriver.storage.googleapis.com/2.32/chromedriver_linux64.zip && \
     unzip *.zip && mv chromedriver /usr/local/bin && \  
     apt-get install -y git && \
-    apt-get clean && apt-get autoclean && rm -f *.deb
+    apt-get clean && apt-get autoclean && rm -f *.deb && rm -f *.zip
 
 
 COPY fonts /usr/share/
